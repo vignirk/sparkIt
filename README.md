@@ -30,7 +30,7 @@ To run SparkApp on another port ID, export PORT environmental variable to a vali
 2. For running on Servers (GreenQloud for example) where you do not have a GUI, you'll need to install X Virtual Frame Buffer (xvfb) and additional packages and Firefox 28.0.
     * `sudo apt-get install -y xvfb`
     * `sudo apt-get install -y xfonts-100dpi xfonts-75dpi xfonts-scalable xfonts-cyrillic`
-    * `sudo apt-get install firefox=28.0+build2-0ubuntu2`
+    * `sudo apt-get install -y firefox=28.0+build2-0ubuntu2`
 
 #### Run it!
 1. Locally just do `./gradlew selenium`
