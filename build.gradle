@@ -70,7 +70,7 @@ task seleniumXvfb(type: Test, dependsOn: installApp) {
             args 'start'
         }
         // Start Spark web app in background
-        'build/install/chuckanator/bin/chuckanator &'.execute()
+        'build/install/sparkit/bin/sparkit &'.execute()
     }
     
     doLast {
