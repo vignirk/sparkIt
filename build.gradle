@@ -47,6 +47,8 @@ task selenium(type: Test, dependsOn: installApp) {
 
     doFirst {
         // Start Spark web app in background
+        // **NOTE** This will NOT work on Windows - the path is not correct.
+        // You can modify this line to make it work.
         'build/install/sparkit/bin/sparkit &'.execute()
     }
 }
