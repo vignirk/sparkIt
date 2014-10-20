@@ -1,5 +1,7 @@
 // Apply the java plugin to add support for Java
 apply plugin: 'java'
+// Add application plugin for installApp and run tasks
+apply plugin: 'application'
 
 // In this section you declare where to find the dependencies of your project
 repositories {
@@ -19,6 +21,13 @@ dependencies {
     // 'test.useTestNG()' to your build script.
     testCompile 'junit:junit:4.11'
 
-    // Adding ICNDBClient dependencies
+    // Adding ICNDBClient dependency
     compile 'net.joningi:icndb-java-api:1.0'
+
+    // Adding Spark dependency
+    compile 'com.sparkjava:spark-core:1.1.1'
 }
+
+// Add instructions for application plugin
+mainClassName = "is.ru.sparkit.ChuckWeb"
+
