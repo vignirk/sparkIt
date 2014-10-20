@@ -32,6 +32,16 @@ To run SparkApp on another port ID, export PORT environmental variable to a vali
     * `sudo apt-get install -y xfonts-100dpi xfonts-75dpi xfonts-scalable xfonts-cyrillic`
     * `sudo apt-get install -y firefox=28.0+build2-0ubuntu2`
 
+**Note** if installing firefox on the server doesn't work, you can do the following:
+
+```sh
+cd /tmp
+wget https://ftp.mozilla.org/pub/mozilla.org/firefox/releases/28.0/linux-x86_64/en-US/firefox-28.0.tar.bz2
+tar xvjf firefox-28.0.tar.bz2
+sudo mv firefox/ /opt/firefox28
+sudo ln -s /opt/firefox28/firefox /usr/bin/firefo
+```
+
 #### Run it!
 1. Locally just do `./gradlew selenium`
 2. Headless mode on servers:
