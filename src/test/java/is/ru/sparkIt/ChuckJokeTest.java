@@ -16,8 +16,8 @@ public class ChuckJokeTest {
 
     @Test
     public void specificJokeById(){
-        String chuckJoke = chuck.getSpecific(15);
-        String joke = "When Chuck Norris goes to donate blood, he declines the syringe, and instead requests a hand gun and a bucket.";
+        String chuckJoke = chuck.getSpecific(5);
+        String joke = "Chuck Norris lost his virginity before his dad did.";
         assertEquals(chuckJoke, joke);
     }
 }
