@@ -7,6 +7,10 @@ import spark.servlet.SparkApplication;
 public class ChuckWeb implements SparkApplication {
     public static void main(String[] args){
         SparkApplication chuckweb = new ChuckWeb();
+        String port = System.getenv("PORT");
+        if (port != null) {
+            setPort(Integer.valueOf(port));
+        }
         chuckweb.init(); 
     }
 

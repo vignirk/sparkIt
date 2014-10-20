@@ -12,3 +12,4 @@ Simple Spark Java app with support for Selenium testing.
 3. Check out a random joke on [localhost:4567](http://localhost:4567)
 4. Check out a specific joke (number 5) on [localhost:4567/id/5](http://localhost:4567/id/5)
 
+To run SparkApp on another port ID, export PORT environmental variable to a valid integer port and it will be used.
