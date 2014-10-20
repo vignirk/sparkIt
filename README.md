@@ -7,12 +7,17 @@ Simple Spark Java app with support for Selenium testing.
 * Java JDK (openjdk-7-jdk recommended)
 
 ### Clone and run!
-1. `git clone` this repo
-2. `./gradlew run` in the repo's base folder
-3. Check out a random joke on [localhost:4567](http://localhost:4567)
-4. Check out a specific joke (number 5) on [localhost:4567/id/5](http://localhost:4567/id/5)
+1. `git clone` this repo.
+2. `./gradlew run` in the repo's base folder.
+3. Check out a random joke on [localhost:4567](http://localhost:4567).
+4. Check out a specific joke (number 5) on [localhost:4567/id/5](http://localhost:4567/id/5).
 
 To run SparkApp on another port ID, export PORT environmental variable to a valid integer port and it will be used.
+
+```sh
+export PORT=1337
+./gradlew run
+```
 
 ## Running tests
 
@@ -39,7 +44,7 @@ cd /tmp
 wget https://ftp.mozilla.org/pub/mozilla.org/firefox/releases/28.0/linux-x86_64/en-US/firefox-28.0.tar.bz2
 tar xvjf firefox-28.0.tar.bz2
 sudo mv firefox/ /opt/firefox28
-sudo ln -s /opt/firefox28/firefox /usr/bin/firefo
+sudo ln -s /opt/firefox28/firefox /usr/bin/firefox
 ```
 
 #### Run it!
