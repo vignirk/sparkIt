@@ -48,3 +48,5 @@ sudo ln -s /opt/firefox28/firefox /usr/bin/firefo
     * `export DISPLAY=:99`
     * `./gradlew seleniumXvfb`
 
+#### And what? ...
+Gradle creates test reports for us. Look at the `build/reports` folder for more sweet Gradle juice.
