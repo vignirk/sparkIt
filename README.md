@@ -1,5 +1,5 @@
 # sparkIt
-Simple Spark Java app with support for Selenium testing.
+Simple Spark Java app with support for Selenium testing. The App serves Chuck Norris jokes in a Web application.
 
 ## Getting started
 
@@ -40,6 +40,7 @@ export PORT=1337
 **Note** if installing firefox on the server doesn't work, you can do the following:
 
 ```sh
+sudo apt-get purge firefox
 cd /tmp
 wget https://ftp.mozilla.org/pub/mozilla.org/firefox/releases/28.0/linux-x86_64/en-US/firefox-28.0.tar.bz2
 tar xvjf firefox-28.0.tar.bz2
