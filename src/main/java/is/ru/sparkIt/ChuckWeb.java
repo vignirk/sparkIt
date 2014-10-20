@@ -19,5 +19,12 @@ public class ChuckWeb implements SparkApplication {
                 return chuckjoke.getRandom();
             }
         });
+
+        get(new Route("/id/:param"){
+            @Override
+            public Object handle(Request request, Response response){
+                return chuckjoke.getSpecific(Integer.parseInt(request.params(":param")));
+            }
+        });
     }
 }
