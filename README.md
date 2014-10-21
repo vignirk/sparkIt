@@ -27,7 +27,7 @@ export PORT=1337
 ### Functional tests - Selenium
 
 #### Requirements
-1. For running locally on your Windows/MacOS/Linux computer, you'll need to install Firefox 28.0
+1. For running locally on your MacOS/Linux computer, you'll need to install Firefox 28.0
     * Newer versions might work, but 28.0 will work, so ...
     * You can grab [Firefox 28.0 here](https://ftp.mozilla.org/pub/mozilla.org/firefox/releases/28.0/).
     * Friendly note: Make sure autoupdate is turned off.
@@ -36,6 +36,10 @@ export PORT=1337
     * `sudo apt-get install -y xvfb`
     * `sudo apt-get install -y xfonts-100dpi xfonts-75dpi xfonts-scalable xfonts-cyrillic`
     * `sudo apt-get install -y firefox=28.0+build2-0ubuntu2`
+3. For running on Windows:
+   * Java JDK 7 in your Path (Example `C:\Program Files\Java\openjdk-7.0.71\bin`)
+   * Firefox 28.0 needs to be accesible from the Command Line
+   * Change lines in `build.gradle` that run the server in the `selenium.doFirst` task to use a valid Windows Path, something like `C:\\path-to-project\\build\\install\\sparkit\\bin\\sparkit.bat` (not tested).
 
 **Note** if installing firefox on the server doesn't work, you can do the following:
 
