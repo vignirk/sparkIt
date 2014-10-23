@@ -57,6 +57,7 @@ sudo ln -s /opt/firefox28/firefox /usr/bin/firefox
 2. Headless mode on servers:
     * `export DISPLAY=:99`
     * `./gradlew seleniumXvfb`
+    * For some reason, the java process isn't terminated after running headless tests. Stop all java processes `sudo killall -9 java` to purge any leftovers.
 
 #### And what? ...
 Gradle creates test reports for us. Look at the `build/reports` folder for more sweet Gradle juice.
