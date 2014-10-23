@@ -2,17 +2,25 @@
 <html>
     <head>
         <title>Chuck Norris Jokes</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- load bootstrap for nicer ui -->
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
     </head>
     <body>
         <div class="container">
             <h1>Get your favorite Chuck Norris Joke</h1>
             <p>Know your favorite? What's the id number?</p>
             <form method="post" action="/id" class="form-inline" role="form">
-                <input type="text" name="number" id="number" placeholder="1">
+                <div class="form group">
+                    <input type="text" name="number" id="number" placeholder="1">
+                </div>
                 <button type="submit">Get joke</button>
             </form>
             <hr>
             <div id="results"></div>
+            <hr>
+            <p>Or did you want a random joke? <a href="index.html">Get them here!</a></p>
         </div>
 
         <!-- Load jquery -->
@@ -29,9 +37,9 @@
                     url: form.attr('action'),
                     data: 'id=' + number
                 }).done(function(joke) {
-                    $('#results').html(joke).attr('class', 'joke');
+                    $('#results').html(joke).attr('class', 'alert alert-success');
                 }).fail(function() {
-                    $('#results').html('Error, no joke found...').attr('class', 'nojoke');
+                    $('#results').html('Error, no joke found...').attr('class', 'alert alert-danger');
                 });
                 event.preventDefault();
             });
