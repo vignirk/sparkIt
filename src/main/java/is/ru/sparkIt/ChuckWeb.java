@@ -26,10 +26,11 @@ public class ChuckWeb implements SparkApplication {
             }
         });
 
-        post(new Route("/id/:param"){
+        post(new Route("/id"){
             @Override
             public Object handle(Request request, Response response){
-                String joke = chuckjoke.getSpecific(Integer.parseInt(request.params(":param")));
+                Integer number = Integer.valueOf(request.queryParams("id"));
+                String joke = chuckjoke.getSpecific(number);
                 return joke;
             }
         });
