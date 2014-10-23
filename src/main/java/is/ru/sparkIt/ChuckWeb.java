@@ -6,6 +6,7 @@ import spark.servlet.SparkApplication;
 
 public class ChuckWeb implements SparkApplication {
     public static void main(String[] args){
+        staticFileLocation("/public");
         SparkApplication chuckweb = new ChuckWeb();
         String port = System.getenv("PORT");
         if (port != null) {
@@ -17,17 +18,19 @@ public class ChuckWeb implements SparkApplication {
     public void init(){
         final ChuckJoke chuckjoke = new ChuckJoke();
         
-        get(new Route("/"){
+        post(new Route("/random"){
             @Override
             public Object handle(Request request, Response response){
-                return chuckjoke.getRandom();
+                String joke = chuckjoke.getRandom();
+                return joke;
             }
         });
 
-        get(new Route("/id/:param"){
+        post(new Route("/id/:param"){
             @Override
             public Object handle(Request request, Response response){
-                return chuckjoke.getSpecific(Integer.parseInt(request.params(":param")));
+                String joke = chuckjoke.getSpecific(Integer.parseInt(request.params(":param")));
+                return joke;
             }
         });
     }
