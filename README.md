@@ -22,7 +22,7 @@ export PORT=1337
 ## Running tests
 
 ### Unit tests
-1. `./gradlew test` - simple enough.
+1. `./gradlew test` - simple enough. Or `./gradlew check`
 
 ### Functional tests - Selenium
 
@@ -55,9 +55,8 @@ sudo ln -s /opt/firefox28/firefox /usr/bin/firefox
 #### Run it!
 1. Locally just do `./gradlew selenium`
 2. Headless mode on servers:
-    * `export DISPLAY=:99`
     * `./gradlew seleniumXvfb`
-    * For some reason, the java process isn't terminated after running headless tests. Stop all java processes `sudo killall -9 java` to purge any leftovers.
+    * Stop Java processes after run: `sudo killall -9 java`
 
 #### And what? ...
 Gradle creates test reports for us. Look at the `build/reports` folder for more sweet Gradle juice.
