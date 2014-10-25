@@ -31,7 +31,7 @@ task selenium(type: Test, dependsOn: installApp) {
     classpath = sourceSets.selenium.runtimeClasspath
 
     doFirst {
-        'build/install/sparkit/bin/sparkit &'.execute()
+        'build/install/sparkIt/bin/sparkIt &'.execute()
     }
 }
 
