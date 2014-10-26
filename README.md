@@ -7,6 +7,12 @@ Runs on (tested on):
 - ✓ Mac OS (Mavericks)
 - ✓ Linux (Ubuntu 14.04 and Ubuntu Server 12.04)
 
+## Screenshots
+
+index.html                | specific.html
+--------------------------|-------------------------------
+![random](img/random.png) | ![specific](img/specific.png)
+
 ## Getting started
 
 ### Requirements
