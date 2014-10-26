@@ -1,10 +1,16 @@
 # sparkIt
 Simple Spark Java app with support for Selenium testing. The App serves Chuck Norris jokes in a Web application.
 
+Runs on (tested on):
+
+- ✓ Windows (8.1, x86)
+- ✓ Mac OS (Mavericks)
+- ✓ Linux (Ubuntu 14.04 and Ubuntu Server 12.04)
+
 ## Getting started
 
 ### Requirements
-* Java JDK (openjdk-7-jdk recommended)
+* Java JDK (openjdk-7-jdk recommended) installed and accessible in the PATH
 
 ### Clone and run!
 1. `git clone` this repo.
@@ -27,7 +33,7 @@ export PORT=1337
 ### Functional tests - Selenium
 
 #### Requirements
-1. For running locally on your MacOS/Linux computer, you'll need to install Firefox 28.0
+1. For running locally on your MacOS/Linux/Windows computer, you'll need to install Firefox 28.0
     * Newer versions might work, but 28.0 will work, so ...
     * You can grab [Firefox 28.0 here](https://ftp.mozilla.org/pub/mozilla.org/firefox/releases/28.0/).
     * Friendly note: Make sure autoupdate is turned off.
@@ -39,9 +45,8 @@ export PORT=1337
 3. For running on Windows:
    * Java JDK 7 in your Path (Example `C:\Program Files\Java\openjdk-7.0.71\bin`)
    * Firefox 28.0 needs to be accesible from the Command Line
-   * Change lines in `build.gradle` that run the server in the `selenium.doFirst` task to use a valid Windows Path, something like `C:\\path-to-project\\build\\install\\sparkit\\bin\\sparkit.bat` (not tested).
 
-**Note** if installing firefox on the server doesn't work, you can do the following:
+**Note** if installing firefox on the server doesn't work, you can do the following on *nix:
 
 ```sh
 sudo apt-get purge firefox
@@ -53,7 +58,7 @@ sudo ln -s /opt/firefox28/firefox /usr/bin/firefox
 ```
 
 #### Run it!
-1. Locally just do `./gradlew selenium`
+1. Locally just do `./gradlew selenium` or `gradlew selenium` on Windows.
 2. Headless mode on servers:
     * `./gradlew seleniumXvfb`
     * Stop Java processes after run: `sudo killall -9 java`
