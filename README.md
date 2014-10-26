@@ -14,11 +14,11 @@ Runs on (tested on):
 
 ### Clone and run!
 1. `git clone` this repo.
-2. `./gradlew run` in the repo's base folder.
+2. `./gradlew run` in the repo's base folder (`gradlew run` on Windows).
 3. Check out a random joke on [localhost:4567](http://localhost:4567).
 4. Check out a specific joke (number 5) on [localhost:4567/id/5](http://localhost:4567/id/5).
 
-To run SparkApp on another port ID, export PORT environmental variable to a valid integer port and it will be used.
+To run SparkApp on another port ID on a *nix OS, export PORT environmental variable to a valid integer port and it will be used.
 
 ```sh
 export PORT=1337
@@ -28,7 +28,7 @@ export PORT=1337
 ## Running tests
 
 ### Unit tests
-1. `./gradlew test` - simple enough. Or `./gradlew check`
+1. `./gradlew test` - simple enough. Or `./gradlew check`. On Windows `gradlew check` works well.
 
 ### Functional tests - Selenium
 
